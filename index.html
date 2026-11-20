@@ -3,26 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0B1020">
+  <!-- AI assistance (OpenAI Codex): updated the browser theme to match the red Pokédex header. -->
+  <meta name="theme-color" content="#b52c32">
   <meta name="description" content="Explore Pokémon from the PokéAPI in a responsive Pokédex encyclopedia.">
   <title>Pokédex Explorer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="page-decoration decoration-one" aria-hidden="true"></div>
-  <div class="page-decoration decoration-two" aria-hidden="true"></div>
+  <!-- AI assistance (OpenAI Codex): removed decorative background rings and the external font to simplify the page. -->
 
+  <!-- AI assistance (OpenAI Codex): simplified the header wording; preserved the existing live API status. -->
   <header class="site-header">
     <div class="header-inner">
       <div class="brand" aria-label="Pokédex Explorer">
         <span class="pokeball-logo" aria-hidden="true"><span></span></span>
         <div>
           <p class="brand-name">POKÉDEX</p>
-          <p class="brand-subtitle">Explore the Pokémon Universe</p>
+          <p class="brand-subtitle">Pokémon reference</p>
         </div>
       </div>
       <div id="apiStatus" class="api-status status-loading" role="status" aria-live="polite">
@@ -33,11 +31,12 @@
   </header>
 
   <main>
+    <!-- AI assistance (OpenAI Codex): replaced promotional copy with a direct title and search instructions; retained existing controls and IDs. -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">National Pokédex</p>
-        <h1 id="hero-title">Gotta Discover <span>'Em All.</span></h1>
-        <p class="hero-description">Search for any Pokémon or let us surprise you with a new discovery.</p>
+        <p class="eyebrow">Pokémon field guide</p>
+        <h1 id="hero-title">National Pokédex</h1>
+        <p class="hero-description">Look up a Pokémon by name or number, or browse the entries below.</p>
       </div>
 
       <form id="searchForm" class="search-form" role="search" novalidate>
@@ -48,15 +47,14 @@
               <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2.1 4.1 4.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
             <input id="pokemonSearch" name="pokemon" type="search" autocomplete="off"
-              placeholder="Search by name or Pokédex number..." aria-describedby="searchHelper searchError">
+              placeholder="Name or number" aria-describedby="searchHelper searchError">
           </div>
           <button id="searchButton" class="button button-primary" type="submit">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span>Search</span>
           </button>
           <button id="randomButton" class="button button-secondary" type="button">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 4h3v3M3 6h3c4 0 5 12 9 12h6M18 20h3v-3M3 18h3c1.5 0 2.6-1.7 3.5-3.5M15.5 8.5C16.4 7 17.3 6 18 6h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Surprise Me</span>
+            <span>Random Pokémon</span>
           </button>
         </div>
         <p id="searchHelper" class="search-helper">Try “pikachu”, “charizard”, or enter a number like “25”.</p>
@@ -74,11 +72,11 @@
       </div>
     </section>
 
+    <!-- AI assistance (OpenAI Codex): simplified the collection heading to describe the existing browse list. -->
     <section class="discovery-section" aria-labelledby="discoveryTitle">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Discover</p>
-          <h2 id="discoveryTitle">Pokémon Collection</h2>
+          <h2 id="discoveryTitle">Browse Pokémon</h2>
         </div>
         <p id="collectionCount" class="collection-count"></p>
       </div>
